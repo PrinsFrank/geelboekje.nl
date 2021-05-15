@@ -1,0 +1,10 @@
+<li itemscope itemtype="http://schema.org/ListItem http://schema.org/Article">
+    <time itemprop="datePublished">{{- post.date | date: site.date_format -}}</time>
+    {%- if page.author -%}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">{{ -}}
+            <span itemprop="name">{{ page.author }}</span>{{ -}}
+        </span>
+    {%- endif -%}
+    <h3 itemprop="name"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+    <span itemprop="alternativeHeadline">{{ post.subtitle }}</span>
+</li>

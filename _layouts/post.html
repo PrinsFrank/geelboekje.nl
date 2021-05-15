@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<a href="/">Back to posts ↺</a>
+<h1 itemprop="name headline">{{ page.title | escape }}</h1>
+<span itemprop="alternativeHeadline">{{ page.subtitle }}</span>
+<br>
+<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: site.date_format }}</time>
+{% if page.author -%}
+<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <span itemprop="name">{{ page.author }}</span>
+</span>
+{%- endif %}
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  {{ content }}
+</article>
+<a href="/">Back to posts ↺</a>

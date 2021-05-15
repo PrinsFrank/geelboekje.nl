@@ -1,0 +1,23 @@
+title: GeelBoekje.nl
+email: info@geelboekje.nl
+description: >- # this means to ignore newlines until next key
+ Het internationale bewijs van inenting: GeelBoekje.nl
+url: "https://geelboekje.nl" # the base hostname & protocol for your site, e.g. http://example.com
+date_format: "%Y-%m-%d"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-tidy
+  - jekyll-sitemap
+
+permalink: /:year/:month/:day/:title
+
+show_drafts: false
+defaults:
+  -
+    values:
+      author: "Frank Prins"
+
+build: 20210515 # cache busting variable for css
